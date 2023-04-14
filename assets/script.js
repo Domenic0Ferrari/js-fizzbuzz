@@ -9,6 +9,7 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 Per sapere se un numero è divisibile per un altro usare '%'
 */
 
+const eleGrid = document.querySelector('.grid');
 let Fizz = 'fizz'
 let Buzz = 'buzz'
 let FizzBuzz = 'fizzbuzz'
@@ -16,15 +17,19 @@ let FizzBuzz = 'fizzbuzz'
 for (let i = 1; i <= 100; i++) {
     if (i % 15== 0){
        console.log(FizzBuzz);
+       eleGrid.innerHTML = eleGrid.innerHTML + `<div class="cell">${FizzBuzz}</div>`
     } 
     else if (i % 3 == 0){
         console.log(Fizz);
+        eleGrid.innerHTML = eleGrid.innerHTML + `<div class="cell">${Fizz}</div>`
     } 
     else if (i % 5 == 0){
         console.log(Buzz);
+        eleGrid.innerHTML = eleGrid.innerHTML + `<div class="cell">${Buzz}</div>`
     } 
     else{
        console.log(i);
+       eleGrid.innerHTML = eleGrid.innerHTML + `<div class="cell">${i}</div>`;
     }
 }
 // rid.innerHTML = eleGrid.innerHTML + `<div class="cell">${i}</div>`;
